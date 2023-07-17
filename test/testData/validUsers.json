@@ -1,0 +1,19 @@
+[
+  {
+    "type": "Admin",
+    "userName": "admin@admin.com",
+    "password": "2020"
+  },
+
+  {
+    "type": "Dev",
+    "userName": "growdev@growdev.com.br",
+    "password": "growdev123"
+  },
+
+  {
+    "type": "Simple",
+    "userName": "biancunha@gmail.com",
+    "password": "123456"
+  }
+]

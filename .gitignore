@@ -1,0 +1,5 @@
+.vscode
+node_modules
+screenshots
+test/reports
+test/cucumber-json-reports

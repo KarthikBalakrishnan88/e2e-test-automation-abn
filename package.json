@@ -1,0 +1,31 @@
+{
+  "name": "e2e-test-automation-abn",
+  "version": "1.0.0",
+  "description": "assignment for qa engineer",
+  "author": "Karthik Balakrishnan",
+  "license": "ISC",
+  "scripts": {
+    "start-server": "http-server --port 5050 src",
+    "lint": "eslint . --ext .ts",
+    "test": "testcafe chrome test/features/userAuthentication -s takeOnFails=true --reporter cucumber-json --reporter-json-folder='test/reports' --reporter-app-name='testcafe-e2e-automation-framework' --reporter-app-version='1.0'",
+    "report":"node test/utils/report-generator.ts"
+  
+  },
+  "devDependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-vue": "^9.15.1",
+    "multiple-cucumber-html-reporter": "^3.4.0",
+    "testcafe": "^3.0.1",
+    "testcafe-reporter-cucumber-json": "^6.3.0",
+    "testcafe-reporter-html": "^1.4.6"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
