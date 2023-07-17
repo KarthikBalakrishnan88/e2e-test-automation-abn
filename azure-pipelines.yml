@@ -9,6 +9,8 @@ jobs:
     displayName: 'Install Node.js'
   - script: npm install --legacy-peer-deps
     displayName: 'Install TestCafe'
+  - script: (npm run start-server&)
+    displayName: 'Run Test application server'
   - script: npm run regression-parallel
     displayName: 'Run TestCafe Tests'
   - task: PublishTestResults@2
