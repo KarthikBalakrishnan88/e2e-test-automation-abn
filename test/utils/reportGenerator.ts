@@ -6,7 +6,7 @@ const reportGenerationTime = new Date().toISOString();
 report.generate({
   reportName: 'QA Assignment ABN AMRO',
   jsonDir: 'test/reports',
-  reportPath: 'test/cucumber-json-reports/html',
+  reportPath: 'test/html-report',
   openReportInBrowser: true,
   disableLog: true,
   displayDuration: true,

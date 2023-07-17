@@ -19,15 +19,15 @@ export default class HomePage extends BasePage {
     }
 
     async isHomeLinkVisible(){
-        await t.expect(Selector(this.homeLink).visible).ok('Home Link is not available');
+        await t.expect(Selector(this.homeLink).filterVisible().exists).ok('Home Link is not available');
     }
 
     async isProductsLinkVisible(){
-        await t.expect(Selector(this.productsLink).visible).ok('Products Link is not available');
+        await t.expect(Selector(this.productsLink).filterVisible().exists).ok('Home Link is not available');
     }
 
     async isContactsLinkVisible(){
-        await t.expect(Selector(this.contactLink).visible).ok('Contacts Link is not available');
+        await t.expect(Selector(this.contactLink).filterVisible().exists).ok('Home Link is not available');
     }
 
 }

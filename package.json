@@ -7,9 +7,9 @@
   "scripts": {
     "start-server": "http-server --port 5050 src",
     "lint": "eslint . --ext .ts",
-    "test": "testcafe chrome test/features/userAuthentication -s takeOnFails=true --reporter cucumber-json --reporter-json-folder='test/reports' --reporter-app-name='testcafe-e2e-automation-framework' --reporter-app-version='1.0'",
-    "report":"node test/utils/report-generator.ts"
-  
+    "regression": "testcafe chrome test/features -s takeOnFails=true --reporter cucumber-json --reporter-json-folder='test/reports' --reporter-app-name='testcafe-e2e-automation-framework' --reporter-app-version='1.0'",
+    "regression-parallel": "testcafe --concurrency 3 chrome test/features -s takeOnFails=true -r xUnit:test/reports/report.xml",
+    "report":"node test/utils/reportGenerator.ts"
   },
   "devDependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.1.0",

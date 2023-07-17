@@ -1,0 +1,17 @@
+jobs:
+- job: abn_ib_e2e_tests
+  pool:
+    vmImage: 'Ubuntu 20.04'
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '20.4.0'
+    displayName: 'Install Node.js'
+  - script: npm install --legacy-peer-deps
+    displayName: 'Install TestCafe'
+  - script: npm run regression-parallel
+    displayName: 'Run TestCafe Tests'
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFiles: 'test/reports/report.xml'
+      testResultsFormat: 'JUnit'
